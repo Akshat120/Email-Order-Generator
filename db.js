@@ -1,6 +1,15 @@
-const mongoose = require("mongoose");
 require("dotenv").config();
-mongoose.set("strictQuery", false);
-mongoose.connect(process.env.CONNECTIONSTRING, () => {
-  console.log("MongoDB-Atlas connected.");
+
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.CONNECTIONSTRING, {
+  useNewUrlParser: "true",
+});
+
+mongoose.connection.on("error", (err) => {
+  console.log("err", err);
+});
+
+mongoose.connection.on("connected", (err, res) => {
+  console.log("mongoose is connected");
 });
