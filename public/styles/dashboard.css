@@ -1,0 +1,87 @@
+body {
+  /* background-color: red; */
+}
+
+h1 {
+  text-align: center;
+  color: #eee;
+  font-weight: 300;
+  font-size: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: red; */
+  align-items: center;
+}
+.recpient_email {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.recpient_email input {
+  /* background-color: red; */
+  width: 200px;
+  margin-bottom: 10px;
+}
+input {
+  outline: none;
+  border: none;
+  padding: 10px 8px;
+  border-radius: 5px;
+  font-family: "Prompt", sans-serif;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  margin: 0;
+  border-radius: 5px;
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.products {
+  /* background-color: red; */
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.plus-btn {
+  width: 50px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 30px;
+  background-color: #00adb5;
+}
+
+.tp {
+  background-color: #eee;
+  text-align: center;
+}
+
+.header {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  color: #eee;
+}
+.total-bill {
+  color: #eee;
+}
+#tb {
+  background-color: #eee;
+  text-align: center;
+  font-size: 18px;
+  width: 100px;
+  color: #00adb5;
+}

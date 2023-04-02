@@ -1,3 +1,7 @@
 exports.homePage = function (req, res) {
-  res.render("home");
+  let error = req.cookies.error;
+  res.clearCookie("error");
+  res.render("home", {
+    error: error,
+  });
 };

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email_Order_System || EOS</title>
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/otp.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('./partials/navbar'); %>
+
+        <div class="form-content">
+
+            <div class="formholder">
+
+                <form action="/cnfotp" method="post">
+                    <div class="otp-box">
+                        <input class="otp" type="text" name="otp" id="otp1" placeholder="X" maxlength="1" />
+                        <input class="otp" type="text" name="otp" id="otp2" placeholder="X" maxlength="1" />
+                        <input class="otp" type="text" name="otp" id="otp3" placeholder="X" maxlength="1" />
+                        <input class="otp" type="text" name="otp" id="otp4" placeholder="X" maxlength="1" />
+                    </div>
+                    <button class="btn" type="submit">confirm</button>
+                </form>
+
+            </div>
+
+        </div>
+
+        <script src="./JS/otp.js"></script>
+</body>
+
+</html>

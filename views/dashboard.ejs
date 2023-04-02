@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard || EOS</title>
+    <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="stylesheet" href="./styles/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-links">
+            <a href="/">
+                <div>Email_Order_System</div>
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="/profile">
+                <div>Profile</div>
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="/integration">
+                <div>Orders</div>
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="/socials">
+                <div>Socials</div>
+            </a>
+        </div>
+        <div class="navbar-links">
+            <a href="/logout">
+                <div>Logout</div>
+            </a>
+        </div>
+    </div>
+
+
+    <h1>
+        Welcome <br>
+        <%= user.email %>
+    </h1>
+
+    <form id='form' action="/sendOrder" method="POST">
+        <div class="recpient_email">
+            <div>
+                <input type="email" name="toemail" placeholder="to_email">
+            </div>
+            <div>
+                <button class="btn" type="submit" id="send">Send</button>
+            </div>
+            <div>
+                <button class="plus-btn" id="plusbtn">+</button>
+            </div>
+        </div>
+        <div class="header">
+
+            <div> ProductId </div>
+            <div> Price per Product </div>
+            <div> Quantity </div>
+            <div> Total Price </div>
+
+        </div>
+        <div class="products" id="product-container">
+            <div class="product">
+                <input type="text" name="pid" class="pid" id="pid1" placeholder="ProductId">
+                <input type="text" name='ppp' class='ppp' id="ppp1" placeholder="Price per product">
+                <input type="text" name='qty' class='qty' id="qty1" placeholder="Qty">
+                <input type="text" name='tp' class='tp' id="tp1" placeholder="Total price" disabled>
+            </div>
+
+        </div>
+        <div class="total-bill">
+            Total Bill: $ <input type="text" name='tb' id="tb" value="0" disabled>
+        </div>
+    </form>
+
+    <script src="./JS/dashboard.js"></script>
+</body>
+
+</html>

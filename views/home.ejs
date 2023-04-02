@@ -5,13 +5,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
+    <title>Email_Order_System || EOS</title>
     <link rel="stylesheet" href="./styles/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1 class="heading">Email_Order_System</h1>
+    <%- include('./partials/navbar'); %>
 
+
+        <div class="form-content">
+
+            <div class="login-form">
+                <div class="form-choice">
+                    <div class="tab tab-login"> login </div>
+                    <div class="tab tab-register"> register </div>
+                </div>
+
+                <div class="formholder">
+
+                    <form action="/login" method="post">
+                        <input class="input-field" type="text" name="email" id="email" placeholder="email" />
+                        <input class="input-field" type="password" name="password" id="password"
+                            placeholder="password" />
+                        <button class="btn" type="submit">login</button>
+                    </form>
+
+                </div>
+
+
+            </div>
+
+            <% if(error){ %>
+                <ul>
+                    <% for(let i=0;i<error.length;i++) {%>
+
+                        <li>
+                            <%= error[i] %>
+                        </li>
+
+                        <%}%>
+                </ul>
+                <% } %>
+
+        </div>
+
+
+
+        <script src="./JS/home.js"></script>
 </body>
 
 </html>
