@@ -18,7 +18,7 @@ To run this project, you will need to add the following environment variables to
 
 `PRIVATEKEY`
 
-## Deployment <a href="https://email-order-system.onrender.com"> LINK </a>
+## Deployment
 
 To deploy this project run
 
