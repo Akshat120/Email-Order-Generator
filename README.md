@@ -6,7 +6,7 @@ This repository is a simulation for the courier api. It contains the best use ca
 
 **Client:** HTML, CSS, JS
 
-**Server:** Node, Express, MongoDB
+**Server:** NodeJS, Express, MongoDB
 
 ## Environment Variables
 
